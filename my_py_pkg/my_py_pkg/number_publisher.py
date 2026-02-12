@@ -2,6 +2,7 @@
 import rclpy
 from rclpy.node import Node
 from example_interfaces.msg import Int64
+from example_interfaces.srv import SetBool
 
 
 class NumberPublisherNode(Node):
@@ -13,7 +14,7 @@ class NumberPublisherNode(Node):
     
     def publish_number(self):
         msg = Int64()
-        msg.data = 36
+        msg.data = 2
         self.publisher_.publish(msg)
 
 
